@@ -1,12 +1,24 @@
 import { useState } from 'react'
 
-function App() {
+export default function App() {
 
   return (
     <div>
         <h1>Todo list</h1>
+
+        <Lego color="red"/>
     </div>
   )
 }
 
-export default App
+function Lego(props) {
+  const classes = "h-16 w-32"
+
+  if (props.color) {
+    classes += " bg-" + props.color
+  }
+
+  return (
+    <div className={classes}></div>
+  )
+}
